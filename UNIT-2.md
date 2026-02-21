@@ -161,15 +161,12 @@ Modern distributed applications where:
 - Peers exchange data directly
 
 ---
-You have the attention span of a context switch. Fine. We jump.
-
 # Issues in Distributed Operating Systems (Very Important)
 
 This topic is heavy scoring. If a 5-mark question appears from UNIT-2, this is a prime suspect.
 
 We structure it cleanly so you can expand or compress based on marks.
 
----
 
 ## 1️⃣ Transparency
 
@@ -197,7 +194,6 @@ System should handle:
 - Increasing nodes
     
 - Increasing data
-    
 
 Challenges:
 
@@ -206,7 +202,6 @@ Challenges:
 - Centralized components
     
 - Network congestion
-    
 
 ---
 
@@ -216,17 +211,15 @@ Multiple users/processes access shared resources simultaneously.
 
 Problem:
 
-- Race conditions
+- Race conditions - A **race condition** happens when two or more processes access and modify shared data at the same time, and the final result depends on the order in which they execute.
     
 - Inconsistent data
-    
 
 Requires:
 
 - Synchronization mechanisms
     
 - Distributed locking
-    
 
 ---
 
@@ -299,14 +292,111 @@ Needs:
 - Encryption
     
 - Access control
+
+----
+# Communication Networks and Protocols in Distributed OS
+
+This is important because distributed systems = machines talking over networks. If communication fails, everything collapses.
+
+We structure this for exam scoring.
+
+---
+
+# 1️⃣ Communication Networks
+
+A distributed system relies on a communication network to connect nodes.
+
+### Types of Networks (exam bullets):
+
+- LAN (Local Area Network)
+    
+- MAN (Metropolitan Area Network)
+    
+- WAN (Wide Area Network)
+    
+- Internet (global scale)
+    
+
+For exams, just write:
+
+> Nodes communicate via message passing over LAN/WAN networks.
+
+That’s enough unless they ask deeper.
+
+---
+
+# 2️⃣ Communication Models
+
+Two major models in Distributed OS:
+
+### 1️⃣ Message Passing Model
+
+Processes communicate by sending and receiving messages.
+
+No shared memory.
+
+Used in distributed systems because machines do not share physical memory.
+
+---
+
+### 2️⃣ Remote Procedure Call (RPC)
+
+Allows a program to execute a procedure on a remote machine as if it were a local call.
+
+This is very important. Very exam-friendly.
+
+If they ask:  
+“What is RPC?”
+
+Write:
+
+> RPC allows a process to invoke a procedure on a remote system transparently.
+
+Use the word “transparently.” Professors like that.
+
+---
+
+# 3️⃣ Communication Protocols
+
+A protocol defines rules for communication.
+
+Most common layered model:
+
+## OSI Model (conceptual)
+
+7 layers:
+
+1. Physical
+    
+2. Data Link
+    
+3. Network
+    
+4. Transport
+    
+5. Session
+    
+6. Presentation
+    
+7. Application
     
 
 ---
 
-Now here’s something important.
+In practical distributed systems:
 
-Among all these, which issue is considered the most fundamental difficulty in distributed systems?
+## TCP/IP Model
 
-Hint: It’s not security. It’s not scalability.
+- Application
+    
+- Transport (TCP/UDP)
+    
+- Internet (IP)
+    
+- Network Access
+    
 
-Think about what makes distributed systems fundamentally different from centralized systems. One word.
+TCP → reliable  
+UDP → faster but unreliable
+
+---
