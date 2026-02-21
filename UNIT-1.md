@@ -296,7 +296,6 @@ Minimal kernel; most services run in user space.
 - Basic scheduling
     
 - Memory management
-    
 
 Other services (file system, drivers) run as user processes.
 
@@ -307,12 +306,10 @@ Other services (file system, drivers) run as user processes.
 - Modular
     
 - Easier to extend
-    
 
 ### Disadvantage:
 
 - IPC overhead reduces performance
-    
 
 ### Example:
 
@@ -353,6 +350,160 @@ Monolithic vs Microkernel (very common)
 |Maintenance|Difficult|Easier|
 
 ---
-![[Pasted image 20260221190503.png]]
 
+# Types of Advanced Operating Systems (in slightly deeper form)
+
+
+This topic is dangerous because professors love asking:
+
+- “Differentiate Distributed OS and Network OS.”
+    
+- “Explain types of Advanced OS.”
+    
+- “What is Multiprocessor OS?”
+
+So now we structure it cleanly.
+
+---
+
+# 1️⃣ Distributed Operating System (DOS)
+
+### Definition
+
+A Distributed Operating System manages a collection of independent computers and makes them appear to users as a single coherent system.
+
+### Key Features:
+
+- Single system image
+    
+- Transparency (location, access, migration)
+    
+- Global resource management
+    
+- High fault tolerance
+
+### Goal:
+
+Hide distribution complexity.
+
+---
+
+# 2️⃣ Network Operating System (NOS)
+
+### Definition:
+
+A Network Operating System allows independent computers to communicate and share resources over a network, but each machine maintains its own OS instance.
+
+### Key Features:
+
+- User aware of multiple machines
+    
+- Remote login
+    
+- File sharing
+    
+- Print sharing
+
+### Goal:
+
+Enable resource sharing, not system unification.
+
+---
+
+# 3️⃣ Multiprocessor Operating System
+
+### Definition:
+
+An OS designed to manage a system with multiple CPUs sharing common memory and I/O.
+
+### Key Features:
+
+- Parallel processing
+    
+- Shared memory model
+    
+- Load balancing
+    
+- Synchronization mechanisms
+
+---
+
+# 4️⃣ Real-Time Distributed OS (Sometimes Mentioned)
+
+Supports:
+
+- Time-critical operations
+    
+- Deterministic response
+    
+- Used in embedded + control systems
+    
+
+Not always in syllabus, but mentioning it adds depth.
+
+---
+### Distributed OS vs Network OS (5 mark special)
+
+- DOS → tightly integrated system
+    
+- NOS → loosely coupled system
+
+
+---
+
+# 📚 Distributed Database Operating System (Exam-Oriented)
+
+
+
+![Image](https://www.researchgate.net/publication/330485258/figure/fig1/AS%3A725701149876225%401550032045417/Architecture-of-a-Distributed-Database-System.ppm)
+
+![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/0%2AVCq1xVVxzjLGiGli)
+
+![Image](https://res.cloudinary.com/hevo/images/f_svg%2Cq_auto%3Abest/fl_sanitize/v1728278108/hevo-learn-1/Full-Replication-in-DBMS/Full-Replication-in-DBMS.svg?_i=AA)
+
+### Definition (2–3 line answer):
+
+A Distributed Database Operating System manages a database that is distributed across multiple networked computers while providing users with a unified database view.
+
+---
+
+### Key Characteristics:
+
+- Data fragmentation (data split across sites)
+    
+- Data replication (copies stored at multiple sites)
+    
+- Distributed query processing
+    
+- Concurrency control across nodes
+    
+- Distributed transaction management
+    
+
+These are scoring keywords.
+
+---
+
+### Why it is special (and why your prof loves it):
+
+Because it combines:
+
+- Operating system concepts
+    
+- Database concepts
+    
+- Distributed system challenges
+    
+
+And that’s academically delicious.
+
+
+**The main new problem in distributed databases is**:
+
+- **Consistency maintenance**
+    
+- **Distributed concurrency control**
+    
+- **Atomic transaction management (ACID across nodes)**
+---
 
